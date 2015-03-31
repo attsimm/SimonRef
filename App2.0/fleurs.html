@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
+    <link href="css/ios.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="js/ratchet.js"></script>
+</head>
+
+<body>
+    <header class="bar bar-nav">
+        <a class="btn btn-link btn-nav pull-left" onclick="ChangePageQuickOut('defunt.html')">
+            <span class="icon icon-left-nav"></span>
+        </a>
+        <h1 id="dead_name" class="title"></h1>
+    </header>
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
+        <ul class="table-view">
+            <li class="table-view-cell media">
+                <a class="navigate-right">
+                    <img class="media-object pull-left" src="http://placehold.it/100x100">
+                    <div class="media-body">
+                        Fleur #1
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </a>
+                <a href="#buyflowers" class="btn btn-positive">Acheter</a>
+            </li>
+            <li class="table-view-cell media">
+                <a class="navigate-right">
+                    <img class="media-object pull-left" src="http://placehold.it/100x100">
+                    <div class="media-body">
+                        Fleur #2
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </a>
+                <a href="#buyflowers2" class="btn btn-positive">Acheter</a>
+            </li>
+            <li class="table-view-cell media">
+                <a class="navigate-right">
+                    <img class="media-object pull-left" src="http://placehold.it/100x100">
+                    <div class="media-body">
+                        Fleur #3
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </a>
+                <a href="#buyflowers3" class="btn btn-positive">Acheter</a>
+            </li>
+        </ul>
+        <div id="buyflowers" class="modal">
+            <header class="bar bar-nav">
+                <a class="icon icon-close pull-right" href="#buyflowers"></a>
+                <h1 class="title">Acheter :  Fleur #1 - 100.00$</h1>
+            </header>
+            <div class="content">
+                <p class="content-padded">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+                </p>
+                <p class="content-padded">
+                    Pour : <span class="dead_name"></span>
+                </p>
+                <form class="formatteddiv">
+                    <input type="email" placeholder="Courriel" id="r_courriel" />
+                    <button class="btn btn-positive btn-block"><i class="fa fa-dollar"></i> Payer avec Paypal</button>
+                </form>
+            </div>
+        </div>
+        <div id="buyflowers2" class="modal">
+            <header class="bar bar-nav">
+                <a class="icon icon-close pull-right" href="#buyflowers2"></a>
+                <h1 class="title">Acheter :  Fleur #2 - 100.00$</h1>
+            </header>
+            <div class="content">
+                <p class="content-padded">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+                </p>
+                <p class="content-padded">
+                    Pour : <span class="dead_name"></span>
+                </p>
+                <form class="formatteddiv">
+                    <input type="email" placeholder="Courriel" id="r_courriel" />
+                    <button class="btn btn-positive btn-block"><i class="fa fa-dollar"></i> Payer avec Paypal</button>
+                </form>
+            </div>
+        </div>
+        <div id="buyflowers3" class="modal">
+            <header class="bar bar-nav">
+                <a class="icon icon-close pull-right" href="#buyflowers3"></a>
+                <h1 class="title">Acheter :  Fleur #3 - 100.00$</h1>
+            </header>
+            <div class="content">
+                <p class="content-padded">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+                </p>
+                <p class="content-padded">
+                    Pour : <span class="dead_name"></span>
+                </p>
+                <form class="formatteddiv">
+                    <input type="email" placeholder="Courriel" id="r_courriel" />
+                    <button class="btn btn-positive btn-block"><i class="fa fa-dollar"></i> Payer avec Paypal</button>
+                </form>
+            </div>
+        </div>
+
+        <script class="js-custom">
+            var id = document.getElementById("idchosen").value;
+            var dead_man = document.getElementsByClassName("dead_name");
+            for (i = 0; i < dead_man.length; i++) {
+                dead_man[i].textContent = document.getElementById("dead_name_current").value;
+            }
+        </script>
+    </div>
+
+    <nav id="navbar" class="bar bar-tab">
+        <a class="tab-item" onclick="ChangePageQuickOut('index.html')">
+            <span class="fa fa-home icon"></span>
+        </a>
+        <a class="tab-item" onclick="ChangePageQuickIn('expositions.html')">
+            <span class="fa fa-calendar icon"></span>
+        </a>
+        <a class="tab-item" onclick="ChangePageQuickIn('sympathies.html')">
+            <span class="icon fa fa-user"></span>
+        </a>
+        <a class="tab-item active" href="#">
+            <span class="icon fa fa-credit-card"></span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon fa fa-share-alt"></span>
+        </a>
+    </nav>
+</body>
+</html>

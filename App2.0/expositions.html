@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
+    <link href="css/ios.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="js/ratchet.js"></script>
+</head>
+
+<body>
+    <header class="bar bar-nav">
+        <a class="btn btn-link btn-nav pull-left" onclick="ChangePageQuickOut('defunt.html')">
+            <span class="icon icon-left-nav"></span>
+        </a>
+        <h1 class="title">Expositions</h1>
+    </header>
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
+        <ul id="expoframe" class="table-view"></ul>
+        <script class="js-custom">
+            var id = document.getElementById("idchosen").value;
+            ExpoInfo(id);
+        </script>
+    </div>
+
+    <nav id="navbar" class="bar bar-tab">
+        <a class="tab-item" onclick="ChangePageQuickOut('index.html')">
+            <span class="fa fa-home icon"></span>
+        </a>
+        <a class="tab-item active" href="#">
+            <span class="fa fa-calendar icon"></span>
+        </a>
+        <a class="tab-item" onclick="ChangePageQuickIn('sympathies.html')">
+            <span class="icon fa fa-user"></span>
+        </a>
+        <a class="tab-item" onclick="ChangePageQuickIn('fleurs.html')">
+            <span class="icon fa fa-credit-card"></span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon fa fa-share-alt"></span>
+        </a>
+    </nav>
+</body>
+</html>

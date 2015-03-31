@@ -1,0 +1,21 @@
+﻿@model List<DcComics.Models.Superheroes>
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="row">
+    <div class="col-md-12">
+        <h2>DC Comics</h2>
+        @foreach (var hero in Model)
+        {
+            <p>
+                @hero.Creation - @hero.Name / @hero.Power
+                <ul>
+                    @foreach (var comic in hero.Comics)
+                    {
+                        <li>@comic.Title - @comic.Rating % - @comic.Publish</li>
+                    }
+                </ul>
+            </p>
+        }
+    </div>
+</div>

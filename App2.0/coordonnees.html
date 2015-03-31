@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
+    <link href="css/ios.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="js/ratchet.js"></script>
+</head>
+
+<body>
+    <header class="bar bar-nav">
+        <a class="btn btn-link btn-nav pull-left" onclick="ChangePageQuickOut('index.html')">
+            <span class="icon icon-left-nav"></span>
+        </a>
+        <h1 class="title">Coordonnées</h1>
+    </header>
+    <div class="content">
+        <ul class="table-view">
+            <li class="table-view-cell media">
+                <a class="navigate-right">
+                    <div class="media-body">
+                        Salon funéraire de Victoriaville
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </a>
+                <a href="#victoriaville" class="btn">Plus d'infos</a>
+            </li>
+            <li class="table-view-cell media">
+                <a class="navigate-right">
+                    <div class="media-body">
+                        Salon funéraire de Drummondville
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </a>
+                <a href="#drummondville" class="btn">Plus d'infos</a>
+            </li>
+            <li class="table-view-cell media">
+                <a class="navigate-right">
+                    <div class="media-body">
+                        Salon funéraire de Trois-Rivière
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </a>
+                <a href="#troisriviere" class="btn">Plus d'infos</a>
+            </li>
+        </ul>
+        <div id="victoriaville" class="modal">
+            <header class="bar bar-nav">
+                <a class="icon icon-close pull-right" href="#victoriaville"></a>
+                <h1 class="title">Salon funéraire de Victoriaville</h1>
+            </header>
+            <div class="content">
+                <p class="content-padded">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+                </p>
+                <ul class="table-view content-padded">
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <div class="media-body">
+                                <span class="media-object pull-left icon fa fa-map-marker"></span>
+                                <strong>
+                                    1285 rue Notre-Dame Est, bur 35.<br />
+                                    Victoriaville (Québec), G6P 4B8
+                                </strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-view-cell media">
+                        <a class="navigate-right" data-ignore="push" href="tel:1-819-752-2253">
+                            <div class=" media-body">
+                                <span class="media-object pull-left icon fa fa-phone"></span>
+                                <strong>
+                                    819.752.2253
+                                </strong>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="drummondville" class="modal">
+            <header class="bar bar-nav">
+                <a class="icon icon-close pull-right" href="#drummondville"></a>
+                <h1 class="title">Salon funéraire de Drummondville</h1>
+            </header>
+            <div class="content">
+                <p class="content-padded">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+                </p>
+                <ul class="table-view content-padded">
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <div class="media-body">
+                                <span class="media-object pull-left icon fa fa-map-marker"></span>
+                                <strong>
+                                    1285 rue Notre-Dame Est, bur 35.<br />
+                                    Drummondville (Québec), G6P 4B8
+                                </strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-view-cell media">
+                        <a class="navigate-right" data-ignore="push" href="tel:1-819-752-2253">
+                            <div class=" media-body">
+                                <span class="media-object pull-left icon fa fa-phone"></span>
+                                <strong>
+                                    819.475.2253
+                                </strong>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="troisriviere" class="modal">
+            <header class="bar bar-nav">
+                <a class="icon icon-close pull-right" href="#troisriviere"></a>
+                <h1 class="title">Salon funéraire de Trois-Rivières</h1>
+            </header>
+            <div class="content">
+                <p class="content-padded">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+                </p>
+                <ul class="table-view content-padded">
+                    <li class="table-view-cell media">
+                        <a class="navigate-right">
+                            <div class="media-body">
+                                <span class="media-object pull-left icon fa fa-map-marker"></span>
+                                <strong>
+                                    1285 rue Notre-Dame Est, bur 35.<br />
+                                    Trois-Rivières (Québec), G6P 4B8
+                                </strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-view-cell media">
+                        <a class="navigate-right" data-ignore="push" href="tel:1-819-752-2253">
+                            <div class=" media-body">
+                                <span class="media-object pull-left icon fa fa-phone"></span>
+                                <strong>
+                                    819.752.2253
+                                </strong>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script class="js-custom">
+            var id = document.getElementById("idchosen").value;
+        </script>
+    </div>
+</body>
+</html>

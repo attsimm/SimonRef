@@ -1,0 +1,110 @@
+﻿@colorprimarylight: #7f8c8d;
+@colorprimary: #1abc9c;
+@secondary: #fff;
+
+body {
+}
+
+.decesphoto {
+    width: 100px;
+}
+
+.media-body-deces {
+    vertical-align: middle;
+}
+
+.load-more {
+    cursor: pointer;
+    padding: 5px 20px;
+}
+
+#wrapper-loader {
+    z-index: 100000000;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    background: rgba(113, 113, 113, 0.50);
+
+    div {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        background-color: #ccc;
+        top: 45%;
+        border-radius: 50%;
+    }
+
+    div:nth-child(1) {
+        background-color: @colorprimary;
+        -webkit-animation: move 2s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        -moz-animation: move 2s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        -o-animation: move 2s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        animation: move 2s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+    }
+
+    div:nth-child(2) {
+        background-color: @colorprimarylight;
+        -webkit-animation: move 2s 150ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        -moz-animation: move 2s 150ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        -o-animation: move 2s 150ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        animation: move 2s 150ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+    }
+
+    div:nth-child(3) {
+        background-color: @colorprimary;
+        -webkit-animation: move 2s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        -moz-animation: move 2s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        -o-animation: move 2s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        animation: move 2s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+    }
+
+    div:nth-child(4) {
+        background-color: @colorprimarylight;
+        -webkit-animation: move 2s 450ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        -moz-animation: move 2s 450ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        -o-animation: move 2s 450ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+        animation: move 2s 450ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+    }
+
+    @-webkit-keyframes move {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: 100%;
+        }
+    }
+
+    @keyframes move {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: 100%;
+        }
+    }
+}
+
+.dead_info {
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+
+    #dead_desc {
+        text-align: justify;
+        margin-top: 20px;
+    }
+
+    #dead_img {
+        border: 1px solid #333;
+    }
+}
+.formatteddiv{
+    padding: 10px 20px;
+    margin-bottom: 50px;
+}
+.checkbox{
+    margin-bottom:20px;
+}

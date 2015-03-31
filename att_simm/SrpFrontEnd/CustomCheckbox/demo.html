@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Custom checkbox</title>
+    <!--Css -->
+    <link rel="stylesheet" href="checkbox.min.css" />
+</head>
+
+<body>
+    <label class="fancy-chck">
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox">&nbsp;</label>
+        <span>Le texte à côté du checkbox</span>
+    </label>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $("input[type=checkbox]").change(function () {
+           alert("Le checkbox est maintenant à  : " + $(this).prop("checked"));
+        });
+    </script>
+</body>
+</html>

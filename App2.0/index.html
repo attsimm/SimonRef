@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
+    <link href="css/ios.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="js/ratchet.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/ajax.jquery.functions.js"></script>
+</head>
+
+<body>
+    <input type="hidden" id="idchosen" />
+    <input type="hidden" id="idlast" />
+    <!--Common dead info-->
+    <input type="hidden" id="dead_name_current" />
+    <!--*Exposition*-->
+    <input type="hidden" id="hiddenLocation" />
+    <input type="hidden" id="hiddenType" />
+    <input type="hidden" id="hiddenDate" />
+    <input type="hidden" id="hiddenBegin" />
+    <input type="hidden" id="hiddenEnd" />
+    <input type="hidden" id="hiddenAddress" />
+
+    <div id="wrapper-loader" style="display:none">
+        <div class='dot'></div>
+        <div class='dot'></div>
+        <div class='dot'></div>
+        <div class='dot'></div>
+    </div>
+    <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav">
+        <a class="icon icon-home pull-right" onclick="ChangePageQuickIn('coordonnees.html')"></a>
+        <h1 class="title">Avis de décès</h1>
+    </header>
+    <div class="bar bar-standard bar-header-secondary">
+        <input type="search" id="tbsearch" placeholder="Rechercher">
+    </div>
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
+        <ul id="mainframe" class="table-view"></ul>
+        <ul id="loadmore" class="table-view">
+            <li class="load-more" data-icon="false">
+                <button class="btn btn-block btn-primary" onclick="GetMoreOnTheMainFrame()">Plus de d'avis</button>
+            </li>
+        </ul>
+        <script class="js-custom">
+            $(document).ready(function () {
+                GetMainFrame();
+                $('#tbsearch').keydown(function (event) {
+                    if (event.keyCode == 13) {
+                        var search = document.getElementById("tbsearch").value;
+                        if (search == "") {
+                            location.reload();
+                        }
+                        else {
+                            SearchOnTheMainFrame(search);
+                        }
+                    }
+                });
+            });
+        </script>
+    </div>
+    <nav id="navbar" class="bar bar-tab" style="display:none">
+    </nav>
+    <script>
+        window.addEventListener('push', function () {
+            var scriptsList = document.querySelectorAll('script.js-custom');
+            for (var i = 0; i < scriptsList.length; ++i) {
+                eval(scriptsList[i].innerHTML);
+            }
+        });
+    </script>
+</body>
+</html>
